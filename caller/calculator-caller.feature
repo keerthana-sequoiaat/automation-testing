@@ -15,6 +15,6 @@ Scenario: Execute Calculator Test Cases
   """
   for (var i = 0; i < testCases.length; i++) {
     karate.log('Running case', i+1, testCases[i]);
-    karate.call('../Action/calculator_test_case.feature', testCases[i]);
+    karate.call('../Action/calculator.feature', testCases[i]);
   }
   """
