@@ -1,7 +1,5 @@
 Feature: Calculator Caller
 
 Scenario: Execute calculator tests
-* def result = call read('../action/data.feature')
-* def testData = result.data
-* def run = function(row){ karate.call('../action/calculator.feature', row) }
-* eval karate.forEach(testData, run)
+  * def testData = call read('../action/data.feature@dataSource')
+  * call read('../action/calculator.feature@calculate') testData.data

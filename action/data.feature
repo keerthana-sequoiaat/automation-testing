@@ -1,6 +1,7 @@
+@dataSource
 Feature: Test Data Source
 
-Scenario:
+Scenario: Load Data
   * def data =
     """
     [

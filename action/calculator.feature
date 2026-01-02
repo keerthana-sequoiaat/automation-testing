@@ -1,3 +1,4 @@
+@calculate
 Feature: Windows Calculator
 
 Scenario: Calculate two numbers
@@ -11,6 +12,4 @@ Scenario: Calculate two numbers
   * click('Equals')
 
   * def result = locate('#CalculatorResults').name
-  * print 'result =', result
-  * screenshot()
   * match result == expected
