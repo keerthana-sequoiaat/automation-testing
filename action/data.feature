@@ -13,7 +13,7 @@ Scenario: Load Data
 
 @lowestDiscount
 Scenario: Load Discount Data
-* table discountData
+* table Products
  |Id| ProductName|Price| Discount |
  |1 | 'Camera'   |1200 |  10      |
  |2 | 'Mouse'    |2000 |  20      |
