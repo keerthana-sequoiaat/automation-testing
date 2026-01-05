@@ -1,7 +1,9 @@
 Feature: Windows Calculator
-
+@setup
 Scenario: Calculate two numbers
-  * robot { window: 'Calculator', fork: 'calc', titleContains: true, highlight: true }
+  * def inputs = testData
+Scenario Outline:  Perform calculator operations
+  * robot { window: 'Calculator', fork: 'calc', titleContains: true }
   * click('Clear')
 
   * def opMap = { add: 'Plus', subtract: 'Minus', multiply: 'Multiply by', divide: 'Divide by' }
@@ -11,6 +13,7 @@ Scenario: Calculate two numbers
   * click('Equals')
 
   * def result = locate('#CalculatorResults').name
-  * print 'result =', result
-  * screenshot()
   * match result == expected
+
+Examples:
+| karate.setup().inputs |
