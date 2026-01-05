@@ -1,5 +1,5 @@
-Feature: Calculator Caller
+Feature: Run Automation
 
-Scenario: Execute calculator tests
-  * def testData = call read('../action/data.feature@dataSource')
-  * call read('../action/calculator.feature@calculate') testData.data
+Scenario: Verify All Calculator Operations
+  * call read('../action/data.feature@dataSource')
+  * call read('../action/calculator.feature')
