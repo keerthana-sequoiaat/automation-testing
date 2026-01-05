@@ -1,5 +1,5 @@
-Feature: Run Automation
+Feature: Calculator Caller
 
-Scenario: Verify All Calculator Operations
+Scenario: Execute calculator test
   * call read('../action/data.feature@dataSource')
   * call read('../action/calculator.feature')
