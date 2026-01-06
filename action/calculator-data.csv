@@ -1,5 +1,0 @@
-num1,num2,operation,expected
-One,Two,add,Display is 3
-Five,One,subtract,Display is 4
-Five,Two,multiply,Display is 10
-Eight,Two,divide,Display is 4
