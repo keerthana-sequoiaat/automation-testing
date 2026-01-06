@@ -9,4 +9,12 @@ Scenario: Load Data
   | 'Eight'  | 'Two'    | 'multiply'  | 'Display is 16'   |
   | 'Eight'  | 'Two'    | 'divide'    | 'Display is 4'    |
 
-  * def result = testData
+
+
+@lowestDiscount
+Scenario: Load Discount Data
+* table Products
+ |Id| ProductName|Price| Discount |
+ |1 | 'Camera'   |1200 |  10      |
+ |2 | 'Mouse'    |2000 |  20      |
+ |3 | 'Clock'    |1200 |  5       |
