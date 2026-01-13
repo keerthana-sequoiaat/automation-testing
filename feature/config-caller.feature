@@ -1,18 +1,19 @@
-Feature:Configuration Test
+Feature: Configuration Test
 
 Background:
-    * def updateAction = '../action/update-config.feature'
+    * def configPath = karate.toAbsolutePath('../inputs/test-config.xml')
+    
     * configure afterScenario = 
     """
-    function() {
-      karate.log('*** REVERTING XML TO ORIGINAL VALUES ***');
-      karate.call(updateAction, { key: 'WaitTimeForPreparation', val: '4000' });
-      karate.call(updateAction, { key: 'SimulationMode', val: 'false' });
-      karate.call(updateAction, { key: 'StopAppOnExit', val: 'false' });
+    function() { 
+        var cmd = `cmd /c powershell -command "$configPath = '${configPath}'; $doc = (Get-Content $configPath) -as [Xml]; $obj = $doc.configuration.appSettings.add | where {$_.Key -eq 'WaitTimeForPreparation'}; $obj.value = '4000'; $obj = $doc.configuration.appSettings.add | where {$_.Key -eq 'SimulationMode'}; $obj.value = 'false'; $obj = $doc.configuration.appSettings.add | where {$_.Key -eq 'StopAppOnExit'}; $obj.value = 'false'; $doc.Save($configPath)"`;
+        
+        var revertKeys = karate.fork(cmd);
+        revertKeys.waitSync();
     }
     """
 
 Scenario: Modify XML and Execute Application
-    * call read(updateAction) { key: 'WaitTimeForPreparation', val: '8000' }
-    * call read(updateAction) { key: 'SimulationMode', val: 'true' }
-    * call read(updateAction) { key: 'StopAppOnExit', val: 'true' }
+    * def updateKeys = karate.fork(`cmd /c powershell -command "$configPath = '${configPath}'; $doc = (Get-Content $configPath) -as [Xml]; $obj = $doc.configuration.appSettings.add | where {$_.Key -eq 'WaitTimeForPreparation'}; $obj.value = '8000'; $obj = $doc.configuration.appSettings.add | where {$_.Key -eq 'SimulationMode'}; $obj.value = 'true'; $obj = $doc.configuration.appSettings.add | where {$_.Key -eq 'StopAppOnExit'}; $obj.value = 'true'; $doc.Save($configPath)"`)
+    
+    * updateKeys.waitSync()
