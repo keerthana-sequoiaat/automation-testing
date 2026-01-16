@@ -1,21 +1,18 @@
 Feature: Get random cat fact
 
-Background:
-    * url 'https://catfact.ninja'
+  Background:
+    * configure headers = { 'Accept': 'application/json' }
 
 Scenario: Get a cat fact and validate response
-    Given path 'fact'
-    When method get
-    Then status 200
+    * url 'https://catfact.ninja'
+    * path 'fact'
+    * method get
+    * status 200
 
-    And match response != null
-
-    And match response.fact != null
-
-    And match response.length == '#number'
-
-    And assert response.length > 0
-    
-    And match response contains { fact: '#string' }
+    * match responseStatus == 200
+    * match response.fact != null
+    * match response.fact == '#string'
+    * match response.length == '#number'
+    * assert response.length > 0
 
     * print response
