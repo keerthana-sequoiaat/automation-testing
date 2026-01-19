@@ -1,6 +1,14 @@
 Feature: Notepad Automation
 Scenario: Type and save text in Notepad
-     
+
+    * print 'Before sleep:', new java.util.Date()
+
+    * def sleepData = call read('classpath:action/sleep.feature')
+
+    * eval sleepData.sleep()
+
+    * print 'After sleep:', new java.util.Date()
+
     * robot { window: 'Untitled - Notepad', fork: 'notepad', highlight: true }
     * robot.input('This is a sample text')
     * robot.click('File')
