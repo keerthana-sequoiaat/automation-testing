@@ -1,1 +1,19 @@
-apple,feewr
+{
+  "InstanceID": "DS-WIN15",
+  "AssayModuleVersion": "2.0.133.0",
+  "BatchId": "2025_06_30_11_15_0005",
+  "Operator": "Meena",
+  "Workflow": "Stress Test",
+  "Step": "Step5",
+  "EndStatus": "Completed",
+  "RunStart": "2025-06-30T11:15:30.4455667-07:00",
+  "RunEnd": "2025-06-30T11:55:48.8899001-07:00",
+  "Notes": [
+    "Stress test selected",
+    "High-load conditions applied",
+    "System performance monitored",
+    "No overheating detected",
+    "All modules responsive",
+    "Stress test completed successfully"
+  ]
+}

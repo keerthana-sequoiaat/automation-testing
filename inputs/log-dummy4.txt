@@ -1,1 +1,19 @@
-drangon fruit
+{
+  "InstanceID": "DS-WIN13",
+  "AssayModuleVersion": "2.0.132.1",
+  "BatchId": "2025_04_18_09_05_0003",
+  "Operator": "Divya",
+  "Workflow": "Calibration Test",
+  "Step": "Step1",
+  "EndStatus": "Completed",
+  "RunStart": "2025-04-18T09:05:44.1122334-07:00",
+  "RunEnd": "2025-04-18T09:18:10.9988776-07:00",
+  "Notes": [
+    "Calibration mode selected",
+    "Sensors initialized",
+    "Baseline values recorded",
+    "Calibration in progress",
+    "Calibration successful",
+    "System ready for operation"
+  ]
+}
