@@ -1,0 +1,20 @@
+{
+  "InstanceID": "DS-WIN11",
+  "AssayModuleVersion": "2.0.131.0",
+  "BatchId": "2025_02_10_01_45_0001",
+  "Operator": "Anitha",
+  "Workflow": "Quality Check",
+  "Step": "Step2",
+  "EndStatus": "Completed",
+  "RunStart": "2025-02-10T01:45:12.1234567-07:00",
+  "RunEnd": "2025-02-10T02:10:45.9876543-07:00",
+  "Notes": [
+    "Selected step2",
+    "Pre-check validation passed",
+    "Process initiated",
+    "Temperature stabilized",
+    "Mixer running",
+    "No errors detected",
+    "Process completed successfully"
+  ]
+}

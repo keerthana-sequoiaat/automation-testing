@@ -1,0 +1,19 @@
+{
+  "InstanceID": "DS-WIN14",
+  "AssayModuleVersion": "2.0.128.9",
+  "BatchId": "2025_05_22_16_40_0004",
+  "Operator": "Suresh",
+  "Workflow": "Validation Run",
+  "Step": "Step4",
+  "EndStatus": "Cancelled",
+  "RunStart": "2025-05-22T16:40:19.6677889-07:00",
+  "RunEnd": "2025-05-22T16:47:02.2233445-07:00",
+  "Notes": [
+    "Selected step4",
+    "Validation checks started",
+    "Reagent levels verified",
+    "Unexpected power fluctuation",
+    "User cancelled the run",
+    "Process stopped safely"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "InstanceID": "DS-WIN12",
+  "AssayModuleVersion": "2.0.129.5",
+  "BatchId": "2025_03_05_14_20_0002",
+  "Operator": "Karthik",
+  "Workflow": "Production Run",
+  "Step": "Step3",
+  "EndStatus": "Failed",
+  "RunStart": "2025-03-05T14:20:08.5567890-07:00",
+  "RunEnd": "2025-03-05T14:28:55.3344556-07:00",
+  "Notes": [
+    "Selected step3",
+    "All safety checks passed",
+    "Process started",
+    "Pressure increased beyond limit",
+    "Alarm triggered",
+    "System auto-stopped",
+    "Process failed due to pressure fault"
+  ]
+}
