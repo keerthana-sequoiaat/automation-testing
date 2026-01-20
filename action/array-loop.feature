@@ -13,5 +13,6 @@ Scenario: Check required city exists
     """
 
     * match each cities == '#string'
+    * def expected = [false, false, true]
+    * match found == expected
 
-    * match found contains true

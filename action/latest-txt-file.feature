@@ -3,7 +3,7 @@ Feature: Find latest txt file and verify keyword
 Scenario: Verify keyword in latest txt file
 
     * def folderPath = 'D:/NEW AUTOMATION/automation-testing/inputs'
-    * def keyword = 'apple'
+    * def keyword = 'Stress test completed successfully'
     * def File = Java.type('java.io.File')
 
     * def files = new File(folderPath).listFiles()
