@@ -10,7 +10,8 @@ Scenario: validate wrong and correct match functions
     * def wrongMatch =
     """
     function(actualData, expectedData) {
-        return karate.match(actualData, expectedData)
+        var result = karate.match(actualData, expectedData)
+        return result
     }
     """
 
@@ -23,8 +24,6 @@ Scenario: validate wrong and correct match functions
     """
 
     * def wrongResult = wrongMatch(actualDataMismatch, expectedDataMismatch)
-
-    # * match wrongResult == true
 
     * match wrongResult.pass == false
 
