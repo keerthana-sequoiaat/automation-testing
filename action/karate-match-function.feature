@@ -24,7 +24,7 @@ Scenario: validate wrong and correct match functions
 
     * def wrongResult = wrongMatch(actualDataMismatch, expectedDataMismatch)
 
-    * match wrongResult == true
+    # * match wrongResult == true
 
     * match wrongResult.pass == false
 
