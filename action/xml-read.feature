@@ -1,7 +1,7 @@
 Feature: Read  XML Data AND Print Specific Fields
 Scenario: Print authors, books and publisher
 
-    * url 'https://sample-files.com/downloads/data/xml/'
+    * url xmlBaseUrl
     * path 'complex-nested.xml'
     * method get
     * status 200
