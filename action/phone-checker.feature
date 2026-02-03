@@ -2,7 +2,7 @@ Feature: Employee phone number validation
 
 Scenario: Generate phone number and validate employee
 
-    * def generatePhone = read('../resources/phone.js')
+    * def generatePhone = call read('../resources/phone.js')
     * def phoneNumber = generatePhone()
 
     * print 'Generated Phone Number:', phoneNumber
